@@ -185,34 +185,111 @@ function dunkinDonuts(){
 console.log(dunkinDonuts());
 
 /*16.  Declare a function named stayinClassy.
-This function will access the values store in the difference and product variables and uses these numbers to return the string "Yea, I drank X gallons of box wine and ate Y bags of Cheetos and still feel vibrant yo!"  X is the value stored at difference variable and Y is the value stored at product variable. Console.log the result.*/
+This function will access the values store in the difference and product variables and uses these numbers to return the string 
+"Yea, I drank X gallons of box wine and ate Y bags of Cheetos and still feel vibrant yo!"  X is the value stored at difference
+ variable and Y is the value stored at product variable. Console.log the result.*/
+ function stayinClassy(){
+  return "Yea, I drank " + difference + " gallons of box wine and ate" + product + " bags of Cheetos and still feel vibrant yo!";
+ }
+ console.log(stayinClassy());
 
 /*17.  Declare a function named watMyName, which takes two parameters firstName and lastName.
 This function will return a string "My name is...firstName lastName."
 Invoke this function by passing in the string values of "Slim", "Shady". and console log the result.
 */
+function watMyName(firstName,lastName){
+  return "My name is " + firstName + lastName;
+}
+var Name=watMyName("Slim", "Shady");
+console.log(Name);
 
-/*18. Using the japanPrefectures array you created in exercise 5, create a for loop that iterates through this array and console logs the following message:
+/*18. Using the japanPrefectures array you created in exercise 5, create a for loop that iterates 
+through this array and console logs the following message:
 
 "The location at i is:  ."  and append the value of i and the value stored within the Array at that index to this string.
 
 i.e. "The locaton at 0 is Tokyo."*/
+function location(location){
+  for (var i=0; i<japanPrefectures.length; i++){
+    return "The location at " + location + " is Tokyo.";
+  }
+}
+var loc=location(1);
+console.log(loc);
+
 
 /*19. Declare a variable named "oddNumbers".
-Use a for loop to add only odd numbers to an Array.  Add 30 odd numbers to the oddNumbers variable starting with the value of 1.*/
+Use a for loop to add only odd numbers to an Array.  Add 30 odd numbers to the oddNumbers variable 
+starting with the value of 1.*/
+var oddNumbers=[];
+for(i=10;i<=20;i++){
+  oddNumbers+=i;
+}
+
+
+var oddNumberArray=[];
+for(i=0; i<=100;i=i+1){
+  if(i%2===1)
+  oddNumberArray.push(i);
+//console.log(i);
+}
+console.log(oddNumberArray);
+
 
 /*20.  Declare a function named "oldEnough".
-This function takes in a number parameter age and returns a Boolean value true or false if the age is lower than the minimum legal drinking age in Antigua.
+This function takes in a number parameter age and returns a Boolean value true or false if the age is lower than the minimum 
+legal drinking age in Antigua.
 
-Invoke this function by passing in a number value.  Google search Antigua's minimum drinking age to confirm the number value.  Store the return value to a variable named drinkinAlready and console log this variable*/
+Invoke this function by passing in a number value.  Google search Antigua's minimum drinking age to confirm the number value. 
+ Store the return value to a variable named drinkinAlready and console log this variable*/
+function oldEnough(age){
+  if(age<18){
+return false;
+  }
+  else{
+    return true;
+  }
+}
+var drinkinAlready=oldEnough(17);
+console.log(drinkinAlready);
 
 /*21. Declare a function named fightDaPower.
-This function checks the value stored at the drinkinAlready variable in the previous exercise and if the value is true, return the string "I'm jumping on the next flight to Antigua." Otherwise return the string "I can't wait to be in the 5th grade!"  Console log the result.*/ 
+This function checks the value stored at the drinkinAlready variable in the previous exercise and if 
+the value is true, return the string "I'm jumping on the next flight to Antigua." Otherwise return the string 
+"I can't wait to be in the 5th grade!"  Console log the result.*/ 
+function fightDaPower(){
+  if(drinkinAlready===false){
+    return"I can't wait to be in the 5th grade!";
+  }
+  else{
+    return"I'm jumping on the next flight to Antigua.";
+  }
+}
+console.log(fightDaPower(drinkinAlready));
 
-/*22. Declare a function named contentFiller which takes in a single parameter which will be an object.  Write a for loop that will put 5 random numbers between the values of 0 to 20 in the contents array in the bigBox object you created in exercise 10.  Console log the result.*/
+/*22. Declare a function named contentFiller which takes in a single parameter which will be an object.  
+Write a for loop that will put 5 random numbers between the values of 0 to 20 in the contents array in the
+bigBox object you created in exercise 10.  Console log the result.*/
+function contentFiller(object){
+  object={}; //resets
+  object.contents=[];
+  for(i=0; i<5; i++){
+    var random=Math.floor((Math.random() * 50));
+    object.contents.push(random);
+  }
+  return object;
+}
+console.log(contentFiller(bigBox)); 
 
-/*23.  Declare a function named firstReverse which takes a single parameter str.  This function will take a string parameter being passed in and return the string in reverse order.*/
-
+/*23.  Declare a function named firstReverse which takes a single parameter str. 
+ This function will take a string parameter being passed in and return the string in reverse order.*/
+var Array1=[ "Me its, Hello" ];
+function firstReverse(str){
+for(var i=Array1.length; i>=0; i--){
+  console.log(Array1[i]);
+}
+}
+firstReverse(Array1);
 /*24.  Using DOM, create the follow HTML layout:
 
 <div id="dessert">
@@ -226,3 +303,36 @@ This function checks the value stored at the drinkinAlready variable in the prev
   </span>
 </div>    
 */
+window.onload = function(){
+  
+var div_dessert = document.createElement('div');
+   div_dessert.id = "dessert";
+
+   var span_cakes = document.createElement('span');
+      span_cakes.id = "cakes";
+
+      var p_0 = document.createElement('p');
+         p_0.appendChild( document.createTextNode("chocolate") );
+      span_cakes.appendChild( p_0 );
+
+   div_dessert.appendChild( span_cakes );
+
+document.body.appendChild( div_dessert );
+
+
+var div_drinks = document.createElement('div');
+   div_drinks.id = "drinks";
+
+   var span_juice = document.createElement('span');
+      span_juice.id = "juice";
+
+      var p_1 = document.createElement('p');
+         p_1.appendChild( document.createTextNode("kool-aid") );
+      span_juice.appendChild( p_1 );
+
+   div_drinks.appendChild( span_juice );
+
+document.body.appendChild( div_drinks );
+
+
+};
