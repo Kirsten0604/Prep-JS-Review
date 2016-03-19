@@ -45,7 +45,8 @@ Console log the variable
 Console log the value at index 1.
 Console log the value at index 3.*/
 var japanPrefectures=["Ehime-ken","Nagasaki-ken", "Shiga-ken","Okinawa-ken", "Hokkaido-ken"];
-console.log(japanPrefectures);
+console.log(japanPrefectures[1]);
+console.log(japanPrefectures[3]);
 
 
 /*6.  Variable with Array for its value.
@@ -53,10 +54,15 @@ Declare a variable named planets and assign the value of each planet in our sola
 Console log the variable
 Console log "Earth" using the index position
 Console log "Uranus" using the index position*/
+var planets=["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
+console.log(planets[2]);
+console.log(planets[6]);
 
 /*7. Variables with Array for its value.
 Declare a variable named india and assign the value of 3 popular tourist attractions.  
 Console log the variable.*/
+var india=["Taj Mahal","Qutb Minar", "Humayun's Tomb"];
+console.log(india);
 
 /*8.  Declare a literal object named "hotel" with properties and values set to:
 
@@ -66,6 +72,13 @@ Console log the variable.*/
     checkIn => null
 
  console log the object*/
+ var hotel={
+  name : "Hilton",
+  rooms : 200,
+  pool : true,
+  checkIn : null,
+};
+console.log(hotel);
 
 /*9.  Declare a literal object named "car" with properties and values set to:
 
@@ -75,6 +88,13 @@ Console log the variable.*/
     doors => 4
 
  console log the object*/
+ var car={
+  make : "BMW",
+  model : "X5",
+  year : 2015,
+  doors : 4,
+};
+console.log(car);
 
 /*10.  Declare a literal object named bigBox and set its value to be an empty object.
 
@@ -83,6 +103,13 @@ Add a prperty named color and set it to any color.
 Add a property named contents and set it to be an empty array
 
 console log the object*/
+var bigBox={};
+bigBox.color="Green";
+bigBox.size=Math.floor((Math.random() * 50));
+bigBox.contents=[];
+console.log(bigBox);
+
+
 
 
 /*11.  Declare a literal object named "colorMeBadd" with properties and values set to:
@@ -99,23 +126,63 @@ console log the object*/
    isJapanese => true              
 
 console log the object */ 
+var colorMeBadd={
+  iro : {
+    akai : "red",
+    aoi : "blue",
+    midori : "green",
+    shiroi : "white",
+    pinku : "pink",
+    murasaki : "purple",
+  },
+  isJapanese : true
+};
+console.log(colorMeBadd);
 
 /*For exercises #12 - 14, declare two variables, one named "dog" and the other named "cat".  Assign a number value for each variable.*/
 
 /*12.  Declare a function named add.
 This function will take two parameters and returns the result of adding two numbers together.
 Store this value in a variable named sum and console log this variable.*/
+var a=8;
+var b=6;
+var sum;
+function add(a,b){
+  return a+b;
+}
+
+sum = add(a,b);
+console.log(sum);
 
 /*13.  Declare a function named subtract. 
 This function will take two parameters and returns the result of subtracting two numbers together. 
 Store this value in a variable named difference and console log this variable.*/
+var difference;
+function subtract(a,b){
+  return a-b;
+}
+
+difference=subtract(a,b);
+console.log(difference);
 
 /*14. Declare a function named multiply.
 This function will take two parameter and return the result of multipling two numbers together.
 Store this value in a variable named product and console log this variable.*/
+var product;
+function multiply(a,b){
+  return a*b;
+}
+
+product=multiply(a,b);
+console.log(product);
 
 /*15.  Declare a function named dunkinDonuts.
-This function will access the value stored in the sum variable and uses this number to return the string "I eats X old fashioned donuts every morning to stay classy." X is the value stored in the sum variable.  Console log the result.  */ 
+This function will access the value stored in the sum variable and uses this number to return the string "I eats X old fashioned donuts 
+every morning to stay classy." X is the value stored in the sum variable.  Console log the result.  */ 
+function dunkinDonuts(){
+  return "I eats " + sum + "  old fashioned donuts every morning to stay classy";
+}
+console.log(dunkinDonuts());
 
 /*16.  Declare a function named stayinClassy.
 This function will access the values store in the difference and product variables and uses these numbers to return the string "Yea, I drank X gallons of box wine and ate Y bags of Cheetos and still feel vibrant yo!"  X is the value stored at difference variable and Y is the value stored at product variable. Console.log the result.*/
