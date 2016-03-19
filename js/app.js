@@ -334,5 +334,4 @@ var div_drinks = document.createElement('div');
 
 document.body.appendChild( div_drinks );
 
-
 };
